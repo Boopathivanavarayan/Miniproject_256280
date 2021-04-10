@@ -3,7 +3,7 @@
  Remember Mr.Bean? Frictional charater from the popular British Comedy Programme, famous not only among children but also among the elders. A man who tought us how to enjoy our own company. Being a smart, attractive, weird and innovative one day he visits a country fete. Among many other fun games there, he also plays this intresting **WIRE LOOP GAME**. This mini-project aims to implement the same in sofware environment using C programming. 
 
 ## Research
-![Description](Link to Pic)
+
 ### Wire Loop Game
 In real time game play, the player will be given a metal loop or probe. The player will then be guiding this probe along a serpentine length of wire without touching the loop to the wire. The system is set in such a way when loop and the wire touch it completes an electric circuit containg a light emmiting diode(LED) or buzzer connected to the power supply, as result of circuit completion the LED emmits light or the buzzer makes a buzz sound. This game demand good hand-eye coordination.
 ### Sate of Art
@@ -11,12 +11,12 @@ In real time game play, the player will be given a metal loop or probe. The play
 - Serveral variants of this game are also available where this gaming concept has been refined and remodeled.
 - What is new in our variant is that we will be using keyboard as an input interface in such a way that it engages left and right brain activity along with hand-eye coordination.  
 ## Cost and Features
-![Description](Link to Pic)
+
 - Game support different levels.
 - Game contains a simple interface.
 - Offline game.
 ## Defining Our System
-    ![System_Definition](https://github.com/Boopathivanavarayan/Miniproject_256280/5_ImagesAndVideos/defsys.png)
+![System_Definition](https://github.com/Boopathivanavarayan/Miniproject_256280/5_ImagesAndVideos/defsys.png)
 ## SWOT ANALYSIS
 ![SWOT_Analysis](https://github.com/Boopathivanavarayan/Miniproject_256280/5_ImagesAndVideos/swot.png)
 
