@@ -16,9 +16,9 @@ In real time game play, the player will be given a metal loop or probe. The play
 - Game contains a simple interface.
 - Offline game.
 ## Defining Our System
-![System_Definition](https://github.com/Boopathivanavarayan/Miniproject_256280/5_ImagesAndVideos/defsys.png)
+<img src="https://github.com/Boopathivanavarayan/Miniproject_256280/blob/main/5_ImagesAndVideos/defsys.PNG" width="450" height="450">
 ## SWOT ANALYSIS
-![SWOT_Analysis](https://github.com/Boopathivanavarayan/Miniproject_256280/5_ImagesAndVideos/swot.png)
+<img src="https://github.com/Boopathivanavarayan/Miniproject_256280/blob/main/5_ImagesAndVideos/swot.PNG" width="450" height="450">
 
 # 4W&#39;s and 1&#39;H
 
