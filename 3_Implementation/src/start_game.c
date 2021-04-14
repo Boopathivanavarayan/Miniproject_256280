@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<conio.h>
 #include<stdlib.h>
 #include<time.h>
 #include<mem.h>
@@ -78,12 +77,12 @@ void start_game(int level){
             printf("Press m twice to go back to menu");
             printf("\nEnter up probe control \n");
             printf("\nUP PROBE CONTROL :- LEFT: '%c' DOWN: '%c' UP: '%c' RIGHT: '%c'\n",up_left,up_down,up_up,up_right);
-            up_ctrl = getch();
+            up_ctrl = getchar();
             printf("\n %c \n",up_ctrl);
             m = up_ctrl;
             printf("\nEnter down probe control \n");
             printf("\nDOWN PROBE CONTROL :- LEFT: '%c' DOWN: '%c' UP: '%c' RIGHT: '%c'\n",down_left,down_down,down_up,down_right);
-            dp_ctrl = getch();
+            dp_ctrl = getchar();
             printf("\n %c \n",dp_ctrl);
             m = dp_ctrl;
 
@@ -137,7 +136,7 @@ void start_game(int level){
                         time_taken = (double)t1/CLOCKS_PER_SEC;
                         score_log(incomplete,time_taken);
                         printf("\nPress'r' to restart\n");
-                        if(getch()=='r')
+                        if(getchar()=='r')
                             start_game(Level);
                 }
 
@@ -149,7 +148,7 @@ void start_game(int level){
                         time_taken = (double)t1/CLOCKS_PER_SEC;
                         score_log(incomplete,time_taken);
                         printf("\nPress'r' to restart\n");
-                        if(getch()=='r')
+                        if(getchar()=='r')
                             start_game(Level);
                 }
                
@@ -161,21 +160,21 @@ void start_game(int level){
                         time_taken = (double)t1/CLOCKS_PER_SEC;
                         score_log(incomplete,time_taken);
                         printf("\nPress'r' to restart\n");
-                        if(getch()=='r')
+                        if(getchar()=='r')
                             start_game(Level);
                 }
                 if(abs(ny-my) > 3){
                     clear();
                     printf("\n   ALERT: Probes are far apart\n");
                     printf("\nPress'r' to restart\n");
-                    if(getch()=='r')
+                    if(getchar()=='r')
                         start_game(Level);
                 }
                 if(abs(nx-mx) > 3){
                     clear();
                     printf("\n   ALERT: Probes are far apart\n");
                     printf("\nPress'r' to restart\n");
-                    if(getch()=='r')
+                    if(getchar()=='r')
                         start_game(Level);
                 }
                 if(ny >= p[level-1].downprobe.end_y && nx >= p[level-1].downprobe.end_x && 
@@ -187,7 +186,7 @@ void start_game(int level){
                             printf("\n You finished in %lf seconds\n",time_taken);
                             score_log(complete,time_taken);
                             printf("\n Press'x' to exit\n");
-                            if(getch()=='x')
+                            if(getchar()=='x')
                                 exit(0);
                 }
                 else{

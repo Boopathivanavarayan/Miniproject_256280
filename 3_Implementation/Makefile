@@ -1,16 +1,16 @@
 # Name of the project
-PROJECT_NAME = Calculator
+PROJECT_NAME = Mr_Bean's_Wire_Loop_Game
 
 # Output directory
 BUILD = build
 
 # All source code files
 SRC = project_main.c\
-src/calculator_operations.c
+src/change_setting.c clear.c level_pattern.c score_log.c show_info.c show_menu.c start_game.c 
 
 # All test source files
-TEST_SRC = src/calculator_operations.c\
-test/test_calculator_operations.c\
+TEST_SRC = src/change_setting.c clear.c level_pattern.c score_log.c show_info.c show_menu.c start_game.c\
+test/test_move.c test_game.c\
 unity/unity.c\
 
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out

@@ -21,7 +21,7 @@ void show_info(void){
     printf("\nDOWN PROBE CONTROL :- LEFT: '%c' DOWN: '%c' UP: '%c' RIGHT: '%c'\n",down_left,down_down,down_up,down_right);
 
     printf("\nTo menu screen press 'm' \n");
-    if(getch() == 'm')
+    if(getchar() == 'm')
         show_menu();
 }
     

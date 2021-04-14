@@ -1,5 +1,4 @@
 #include<stdlib.h>
-#include<conio.h>
 #include"game.h"
 //Clear console
 void clear(){

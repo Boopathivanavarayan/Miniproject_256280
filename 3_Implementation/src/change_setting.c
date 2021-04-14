@@ -1,6 +1,5 @@
 #include"game.h"
 #include<stdio.h>
-#include<conio.h>
 int Level = 1;
 char up_left = 'q',up_down='w',up_up='e',up_right='r';
 char down_left = 'h',down_down='j',down_up='k',down_right='l';
@@ -20,37 +19,37 @@ void change_setting(void){
         printf("\n Enter 1 or 2 or 3\n");
         scanf("%d",&Level);
         printf("\nTo menu screen press 'm' \n");
-        if(getch() == 'm')
+        if(getchar() == 'm')
             show_menu();   
     }
     if(setting==2){
         printf("\nEnter your comfortable control keys\n");
         printf("\nEnter left control key for up_probe: \n");
-        up_left = getch();
+        up_left = getchar();
         printf("%c",up_left);
         printf("\nEnter down cntrol key for up_probe: \n");
-        up_down = getch();
+        up_down = getchar();
         printf("%c",up_down);
         printf("\nEnter up cntrol key for up_probe: \n");
-        up_up = getch();
+        up_up = getchar();
         printf("%c",up_up);
         printf("\nEnter right cntrol key for up_probe: \n");
-        up_right = getch();
+        up_right = getchar();
         printf("%c",up_right);
         printf("\nEnter left cntrol key for down_probe: \n");
-        down_left = getch();
+        down_left = getchar();
         printf("%c",down_left); 
         printf("\nEnter down cntrol key for down_probe: \n");
-        down_down = getch();
+        down_down = getchar();
         printf("%c",down_down);
         printf("\nEnter up cntrol key for down_probe: \n");
-        down_up = getch();
+        down_up = getchar();
         printf("%c",down_up);
         printf("\nEnter right cntrol key for down_probe: \n");
-        down_right = getch();
+        down_right = getchar();
         printf("%c",down_right);
         printf("\nTo menu screen press 'm' \n");
-        if(getch() == 'm')
+        if(getchar() == 'm')
             show_menu();
     }
     
