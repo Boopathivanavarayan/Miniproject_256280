@@ -1,7 +1,5 @@
 # SDLC Activity Based Learning
 
-Visit [Pages for Report -optional](using github.io option)
-
 Build | Code Quality | Unity | [Git Inspector](using github.io option)
 ------|----------|-------|--------------
 [![C/C++ CI](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/c-cpp.yml) | [![Static Cppcheck](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/cppcheck.yml) [![Dynamic Valgrind](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/CodeQuality_Dynamic.yml/badge.svg)](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/CodeQuality_Dynamic.yml)| [![Unity - Unit Testing](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/unity.yml/badge.svg)](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/unity.yml)| [![Git Inspector](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/gitinspector.yml/badge.svg)](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/gitinspector.yml)
@@ -14,6 +12,7 @@ Folder             | Description
 `2_Design`         | Documents specifying design details
 `3_Implementation` | All code and documentation
 `4_Test_plan`      | Documents with test plans and procedures
+`5_ImagesAndVideos`| All images used 
 
 ## Contributors List and Summary
 
