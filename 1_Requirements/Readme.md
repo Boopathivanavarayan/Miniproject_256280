@@ -9,7 +9,7 @@
 ### Wire Loop Game
 In real time game play, the player will be given a metal loop or probe. The player will then be guiding this probe along a serpentine length of wire without touching the loop to the wire. The system is set in such a way when loop and the wire touch it completes an electric circuit containg a light emmiting diode(LED) or buzzer connected to the power supply, as result of circuit completion the LED emmits light or the buzzer makes a buzz sound. This game demand good hand-eye coordination.
 ### Sate of Art
-- This traditional game has got an android, online and virual reality versions.
+- This traditional game has got an android, online and virual reality versions. Here I have implemented my own CLI version.
 - Serveral variants of this game are also available where this gaming concept has been refined and remodeled.
 - What is new in our variant is that we will be using keyboard as an input interface in such a way that it engages left and right brain activity along with hand-eye coordination.  
 ## Cost and Features
