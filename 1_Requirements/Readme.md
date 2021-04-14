@@ -1,5 +1,5 @@
 # Requirements
-![game_name]("https://github.com/Boopathivanavarayan/Miniproject_256280/blob/main/5_ImagesAndVideos/name2.PNG")
+<img src="https://github.com/Boopathivanavarayan/Miniproject_256280/blob/main/5_ImagesAndVideos/name1.PNG" width="800" height="100">
 ## Introduction
  Remember Mr.Bean? Frictional charater from the popular British Comedy Programme, famous not only among children but also among the elders. A man who tought us how to enjoy our own company. Being a smart, attractive, weird and innovative one day he visits a country fete. Among many other fun games there, he also plays this intresting **WIRE LOOP GAME**. This mini-project aims to implement the same in sofware environment using C programming. 
 
@@ -20,6 +20,7 @@ In real time game play, the player will be given a metal loop or probe. The play
 <img src="https://github.com/Boopathivanavarayan/Miniproject_256280/blob/main/5_ImagesAndVideos/defsys.PNG" width="450" height="450">
 
 ## SWOT ANALYSIS
+
 <img src="https://github.com/Boopathivanavarayan/Miniproject_256280/blob/main/5_ImagesAndVideos/swot.PNG" width="450" height="450">
 
 # 4W&#39;s and 1&#39;H
