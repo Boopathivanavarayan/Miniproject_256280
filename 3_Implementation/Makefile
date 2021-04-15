@@ -6,19 +6,19 @@ BUILD = build
 
 # All source code files
 SRC = src/show_info.c \
-src/show_menu.c \
-src/score_log.c \
-src/change_setting.c \
-src/level_pattern.c \
-src/start_game.c \
-src/clear.c \
+src\show_menu.c \
+src\score_log.c \
+src\change_setting.c \
+src\level_pattern.c \
+src\start_game.c \
+src\clear.c \
 project_main.c
 
 # All test source files
-TEST_SRC = test/test_level_pattern.c \
-test/test_move.c \
-test/test_main.c \
-unity/unity.c
+TEST_SRC = test\test_level_pattern.c \
+test\test_move.c \
+test\test_main.c \
+unity\unity.c
 
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
@@ -44,7 +44,7 @@ $(PROJECT_NAME):all
 .PHONY: run clean test doc all
 
 all: $(SRC) $(BUILD)
-	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT).out
+	gcc $(INC) $(SRC)  -o $(PROJECT_OUTPUT).out
 
 # Call `make run` to run the application
 run:$(PROJECT_NAME)
