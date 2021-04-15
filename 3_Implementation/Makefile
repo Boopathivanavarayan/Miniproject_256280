@@ -9,7 +9,7 @@ src/level_pattern.c \
 src/start_game.c \
 src/clear.c \
 
-COV_SRC = test_main.c
+COV_SRC = test_move.c
 
 TEST_SRC = test/test_main.c \
 test/test_move.c \
@@ -42,8 +42,8 @@ test:
 	./$(call FixPath,$(TEST_PROJ_NAME).$(EXEC))
 
 coverage:
-	cp test/test_main.c .
-	gcc -fprofile-arcs -ftest-coverage -I $(INC_H) -I $(INC_T) unity/unity.c test_main.c $(SRC) -o $(call FixPath, $(TEST_PROJ_NAME).$(EXEC))
+	
+	gcc -fprofile-arcs -ftest-coverage -I $(INC_H) -I $(INC_T) $(TEST_SRC) -o $(call FixPath, $(TEST_PROJ_NAME).$(EXEC))
 	$(call FixPath, ./$(TEST_PROJ_NAME).$(EXEC))
 	gcov -a $(COV_SRC)
 	$(RM) *.$(EXEC)
@@ -51,10 +51,9 @@ coverage:
 	$(RM) *.gcno
 	$(RM) *.c.gcov
 	$(RM) *.DAT
-	$(RM) test_main.c
-
+	
 cppcheck:
-	cppcheck --enable=all $(SRC) main.c
+	cppcheck --enable=all $(SRC) project_main.c
 debug:
 	gcc -I $(INC_H) $(SRC) project_main.c -g -o $(PROJ_NAME).$(EXEC)
 	gdb $(PROJ_NAME).$(EXEC)
