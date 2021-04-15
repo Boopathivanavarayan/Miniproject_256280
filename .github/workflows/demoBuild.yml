@@ -26,7 +26,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: gcc build
-        run: gcc project_main.c src/show_info.c src/show_menu.c src/score_log.c src/change_setting.c src/level_pattern.c src/start_game.c src/clear.c  -Iinc -o Mr_Bean's_Wire_Loop_Game.out
+        run: gcc project_main.c src/show_info.c src/show_menu.c src/score_log.c src/change_setting.c src/level_pattern.c src/start_game.c src/clear.c  -Iinc -o game.out
 
       
           
