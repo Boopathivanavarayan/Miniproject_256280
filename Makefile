@@ -1,4 +1,4 @@
-PROJ_NAME = Mr_Bean's_Wire_Loop_Game
+PROJ_NAME = game
 TEST_PROJ_NAME = Test_$(PROJ_NAME)
 
 SRC = src/show_info.c \
