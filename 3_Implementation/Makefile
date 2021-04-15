@@ -9,15 +9,14 @@ SRC = project_main.c\
 src/change_setting.c clear.c level_pattern.c score_log.c show_info.c show_menu.c start_game.c 
 
 # All test source files
-TEST_SRC = src/change_setting.c clear.c level_pattern.c score_log.c show_info.c show_menu.c start_game.c\
-test/test_move.c test_game.c\
-unity/unity.c\
+TEST_SRC = test/test_level_pattern.c test_move.c test_main.c\
+unity/unity.c
 
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
 # All include folders with header files
-INC	= -Iinc\
--Iunity\
+INC	= -I inc\
+-I unity\
 
 #Library Inlcudes
 #if working with CUnit 
