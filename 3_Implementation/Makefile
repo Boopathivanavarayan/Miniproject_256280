@@ -5,20 +5,20 @@ PROJECT_NAME = Mr_Bean's_Wire_Loop_Game
 BUILD = build
 
 # All source code files
-SRC = src\show_info.c \
-src\show_menu.c \
-src\score_log.c \
-src\change_setting.c \
-src\level_pattern.c \
-src\start_game.c \
-src\clear.c \
+SRC = src/show_info.c \
+src/show_menu.c \
+src/score_log.c \
+src/change_setting.c \
+src/level_pattern.c \
+src/start_game.c \
+src/clear.c \
 project_main.c
 
 # All test source files
-TEST_SRC = test\test_level_pattern.c \
-test\test_move.c \
-test\test_main.c \
-unity\unity.c
+TEST_SRC = test/test_level_pattern.c \
+test/test_move.c \
+test/test_main.c \
+unity/unity.c
 
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
