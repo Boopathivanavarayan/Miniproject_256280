@@ -27,10 +27,15 @@ int mx,my,nx,ny;
 //result[3] -> down probe y position
 //result[4] -> status indicator
 //status 1->fail 2->won 3->in progress 4->index out of range
-int result[5]={0,0,0,0,0};
 
+int result[5];
 int* test_move(int level, char up_ctrl, char dp_ctrl){
-     p[level-1].upprobe.x = p[level-1].upprobe.y = p[level-1].downprobe.x = p[level-1].downprobe.y =0; 
+    result[0] =0;
+    result[1] =0;
+    result[2] =0;
+    result[3] =0;
+    result[4] =0;
+    p[level-1].upprobe.x = p[level-1].upprobe.y = p[level-1].downprobe.x = p[level-1].downprobe.y =0; 
     if(up_ctrl == up_left)
         p[level-1].upprobe.x = -1;
     else if(up_ctrl == up_down)
@@ -105,12 +110,22 @@ int* test_move(int level, char up_ctrl, char dp_ctrl){
                 p[level-1].upprobe.begin_y += p[level-1].upprobe.y;
                 p[level-1].downprobe.begin_x += p[level-1].downprobe.x;
                 p[level-1].downprobe.begin_y += p[level-1].downprobe.y;
-
+                
                 result[0] =  p[level-1].upprobe.begin_x;
+                printf("\nresult0:%d",result[0]);
                 result[1] =  p[level-1].upprobe.begin_y;
+                printf("\nresult1:%d",result[1]);
                 result[2] =  p[level-1].downprobe.begin_x;
+                printf("\nresult2:%d",result[2]);
                 result[3] =  p[level-1].downprobe.begin_y;
+                printf("\nresult3:%d",result[3]);
+               /*
+                result[0] =  mx;
+                result[1] =  my;
+                result[2] =  nx;
+                result[3] =  ny;
                 result[4] = 3;
+                */
                 if(level == 1){
                         pattern1[p[level-1].upprobe.begin_y][p[level-1].upprobe.begin_x] = '|';
                         pattern1[p[level-1].downprobe.begin_y][p[level-1].downprobe.begin_x] = '|';
@@ -130,7 +145,7 @@ int* test_move(int level, char up_ctrl, char dp_ctrl){
         else{
                result[4] = 4;
         } 
-
-
+    printf("\nresult4:%d",result[4]);
+    
     return result;
 }

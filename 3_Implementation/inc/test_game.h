@@ -18,7 +18,7 @@ typedef struct{
 	int height,width;
 	struct probe_pos upprobe,downprobe;
 }patterns;
-
+int result[5];
 int* test_move(int level, char up_ctrl, char dp_ctrl);
 
 #endif /* #define __GAME_H__ */
