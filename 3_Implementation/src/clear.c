@@ -1,5 +1,5 @@
-#include<stdlib.h>
 #include"game.h"
+#include<stdlib.h>
 //Clear console
 void clear(){
     #if defined(__linux__) || defined(__unix__) || defined(__APPLE__)

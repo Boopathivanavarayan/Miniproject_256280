@@ -1,4 +1,4 @@
-
+#include"test_game.h"
 //Default controls
 int Level = 1;
 char up_left = 'q',up_down='w',up_up='e',up_right='r';
