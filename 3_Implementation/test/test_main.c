@@ -37,9 +37,9 @@ void test_move1(void) {
   int *actual1 = test_move(1, 'r','l' );
   int *actual2 = test_move(1, 'q','l' );
   int *actual3 = test_move(1, 'w','l' );
-  TEST_ASSERT_EQUAL_INT_ARRAY(exp[0], actual1, 5);
-  TEST_ASSERT_EQUAL_INT_ARRAY(exp[1], actual2, 5);
-  TEST_ASSERT_EQUAL_INT_ARRAY(exp[3], actual3, 5);
+  TEST_ASSERT_EQUAL_INT_ARRAY_MESSAGE(exp[0], actual1, 5, "move1-1");
+  TEST_ASSERT_EQUAL_INT_ARRAY_MESSAGE(exp[1], actual2, 5, "move1-2");
+  TEST_ASSERT_EQUAL_INT_ARRAY_MESSAGE(exp[3], actual3, 5, "move1-3");
 }
 void test_move2(void) {
   int exp[3][5]={{1,1,0,4,3},{0,0,0,0,4},{0,0,0,0,1}};
