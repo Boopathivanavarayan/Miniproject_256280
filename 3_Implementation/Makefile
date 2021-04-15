@@ -1,5 +1,5 @@
 # Name of the project
-PROJECT_NAME = Mr_Bean's_Wire_Loop_Game
+PROJECT_NAME = game
 
 # Output directory
 BUILD = build
