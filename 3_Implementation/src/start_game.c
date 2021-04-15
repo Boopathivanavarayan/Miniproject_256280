@@ -65,39 +65,40 @@ void hard(void){
 void (*print_pattern[3])(void) = {easy,medium,hard};
 void set_probe_begning(int level);
 void start_game(int level){
-     //start to record time
+
+        //start to record time
         t1 = clock();
         set_probe_begning(level);
         while(flag == 1){
+            char *up_ctrl = (char*)malloc(sizeof(char));
+            char *dp_ctrl = (char*)malloc(sizeof(char));
             clear();
             p[level-1].upprobe.x = p[level-1].upprobe.y = p[level-1].downprobe.x = p[level-1].downprobe.y =0; 
-            m = 'q';
+        
             print_pattern[level-1]();
             // Get up probe down probe controls from user
             printf("Press m twice to go back to menu");
-            printf("\nEnter up probe control \n");
+            printf("\nEnter up probe control and Press Enter \n");
             printf("\nUP PROBE CONTROL :- LEFT: '%c' DOWN: '%c' UP: '%c' RIGHT: '%c'\n",up_left,up_down,up_up,up_right);
-            up_ctrl = getchar();
-            printf("\n %c \n",up_ctrl);
-            m = up_ctrl;
-            printf("\nEnter down probe control \n");
+            scanf("%s",up_ctrl);
+            m = *up_ctrl;
+            printf("\nEnter down probe control and Press Enter \n");
             printf("\nDOWN PROBE CONTROL :- LEFT: '%c' DOWN: '%c' UP: '%c' RIGHT: '%c'\n",down_left,down_down,down_up,down_right);
-            dp_ctrl = getchar();
-            printf("\n %c \n",dp_ctrl);
-            m = dp_ctrl;
-
+            scanf("%s",dp_ctrl);
+            m = *dp_ctrl;
+        
             if(m == 'm')
                 show_menu();
         
             p[level-1].upprobe.x = p[level-1].upprobe.y = p[level-1].downprobe.x = p[level-1].downprobe.y =0; 
             // Check for left, right, down or up control and update variables accordingly.
-            if(up_ctrl == up_left)
+            if(*up_ctrl == up_left)
                 p[level-1].upprobe.x = -1;
-            else if(up_ctrl == up_down)
+            else if(*up_ctrl == up_down)
                 p[level-1].upprobe.y = 1;
-            else if(up_ctrl == up_up)
+            else if(*up_ctrl == up_up)
                 p[level-1].upprobe.y = -1;
-            else if(up_ctrl == up_right)
+            else if(*up_ctrl == up_right)
                 p[level-1].upprobe.x = 1;
             else{
                  printf("Invalid move");
@@ -105,21 +106,22 @@ void start_game(int level){
                  continue;
             }
                
-            if(dp_ctrl == down_left)
+            if(*dp_ctrl == down_left)
                 p[level-1].downprobe.x = -1;
-            else if(dp_ctrl == down_down)
+            else if(*dp_ctrl == down_down)
                 p[level-1].downprobe.y = 1;
-            else if(dp_ctrl == down_up)
+            else if(*dp_ctrl == down_up)
                 p[level-1].downprobe.y = -1;
-            else if(dp_ctrl == down_right)
+            else if(*dp_ctrl == down_right)
                 p[level-1].downprobe.x = 1;
             else{
                  printf("Invalid move");
                  set_probe_begning(level);
                  continue;
             }
-                        
-          
+            free(up_ctrl);
+            free(dp_ctrl);
+
             //calculate new positions of the probes m-> up probe n-> down probe
             mx = p[level-1].upprobe.begin_x + p[level-1].upprobe.x;
             my = p[level-1].upprobe.begin_y + p[level-1].upprobe.y;
@@ -137,9 +139,14 @@ void start_game(int level){
                         t1 = clock()-t1;
                         time_taken = (double)t1/CLOCKS_PER_SEC;
                         score_log(incomplete,time_taken);
-                        printf("\nPress'r' to restart\n");
-                        if(getchar()=='r')
+                        printf("\nPress'r' to restart and Enter\n");
+                        char *menu = (char*)malloc(sizeof(char));
+                        scanf("%s",menu);
+                        if(*menu =='r'){
+                            free(menu);
                             start_game(Level);
+                        }
+                            
                 }
 
                 else if(level == 2 && (pattern2[ny][nx]=='#'|| pattern2[my][mx]=='#')){
@@ -149,9 +156,13 @@ void start_game(int level){
                         t1 = clock()-t1;
                         time_taken = (double)t1/CLOCKS_PER_SEC;
                         score_log(incomplete,time_taken);
-                        printf("\nPress'r' to restart\n");
-                        if(getchar()=='r')
+                        printf("\nPress'r' to restart and Enter\n");
+                        char *menu = (char*)malloc(sizeof(char));
+                        scanf("%s",menu);
+                       if(*menu =='r'){
+                            free(menu);
                             start_game(Level);
+                        }
                 }
                
                 else if(level == 3 && (pattern3[ny][nx]=='#'|| pattern3[my][mx]=='#')){
@@ -161,24 +172,36 @@ void start_game(int level){
                         t1 = clock()-t1;
                         time_taken = (double)t1/CLOCKS_PER_SEC;
                         score_log(incomplete,time_taken);
-                        printf("\nPress'r' to restart\n");
-                        if(getchar()=='r')
+                        printf("\nPress'r' to restart and Enter\n");
+                        char *menu = (char*)malloc(sizeof(char));
+                        scanf("%s",menu);
+                        if(*menu =='r'){
+                            free(menu);
                             start_game(Level);
+                        }
                 }
                 // Check whether probes are apart. 
                 if(abs(ny-my) > 3){
                     clear();
                     printf("\n   ALERT: Probes are far apart\n");
-                    printf("\nPress'r' to restart\n");
-                    if(getchar()=='r')
+                    printf("\nPress'r' to restart and Enter\n");
+                    char *menu = (char*)malloc(sizeof(char));
+                    scanf("%s",menu);
+                    if(*menu =='r'){
+                        free(menu);
                         start_game(Level);
+                    }
                 }
                 if(abs(nx-mx) > 3){
                     clear();
                     printf("\n   ALERT: Probes are far apart\n");
-                    printf("\nPress'r' to restart\n");
-                    if(getchar()=='r')
+                    printf("\nPress'r' to restart and Enter\n");
+                   char *menu = (char*)malloc(sizeof(char));
+                    scanf("%s",menu);
+                    if(*menu =='r'){
+                        free(menu);
                         start_game(Level);
+                    }
                 }
                 //Check whether user reached the end of the game.
                 if(ny >= p[level-1].downprobe.end_y && nx >= p[level-1].downprobe.end_x && 
@@ -189,9 +212,13 @@ void start_game(int level){
                             printf("\n    BRAVOO! YOU WON!!!\n");
                             printf("\n You finished in %lf seconds\n",time_taken);
                             score_log(complete,time_taken);
-                            printf("\n Press'x' to exit\n");
-                            if(getchar()=='x')
+                            printf("\n Press'x' to exit and Enter\n");
+                            char *menu = (char*)malloc(sizeof(char));
+                            scanf("%s",menu);
+                            if(*menu =='x'){
+                                free(menu);
                                 exit(0);
+                            }
                 }
                 else{
                     // delete current position of the probes.
@@ -236,7 +263,7 @@ void start_game(int level){
             } 
            
         }
-        //set_probe_begning(Level);
+
         show_menu();
 }
 void set_probe_begning(int level){
@@ -251,8 +278,12 @@ void set_probe_begning(int level){
         else
             pattern1[p[level-1].downprobe.begin_y][p[level-1].downprobe.begin_x]= '-';
 
-        pattern1[1][0] = '|';
-        pattern1[3][0] = '|';
+        p[0].upprobe.begin_x=0;
+        p[0].upprobe.begin_y=1;
+        p[0].downprobe.begin_x=0;
+        p[0].downprobe.begin_y=3;
+        pattern1[p[0].upprobe.begin_y][ p[0].upprobe.begin_x] = '|';
+        pattern1[p[0].downprobe.begin_y][ p[0].downprobe.begin_x] = '|';
     }
     else if(level == 2){
         if(pattern2[p[level-1].upprobe.begin_y][p[level-1].upprobe.begin_x] == '#')
@@ -265,8 +296,12 @@ void set_probe_begning(int level){
         else
             pattern2[p[level-1].downprobe.begin_y][p[level-1].downprobe.begin_x]= '-';
 
-        pattern2[1][0] = '|';
-        pattern2[3][0] = '|';
+        p[0].upprobe.begin_x=0;
+        p[0].upprobe.begin_y=1;
+        p[0].downprobe.begin_x=0;
+        p[0].downprobe.begin_y=3;
+        pattern1[p[0].upprobe.begin_y][ p[0].upprobe.begin_x] = '|';
+        pattern1[p[0].downprobe.begin_y][ p[0].downprobe.begin_x] = '|';
     }
         else if(level == 3){
             if( pattern3[p[level-1].upprobe.begin_y][p[level-1].upprobe.begin_x] == '#')
@@ -279,8 +314,12 @@ void set_probe_begning(int level){
             else
                 pattern3[p[level-1].downprobe.begin_y][p[level-1].downprobe.begin_x] = '-';
 
-        pattern3[1][0] = '|';
-        pattern3[3][0] = '|';
+        p[0].upprobe.begin_x=0;
+        p[0].upprobe.begin_y=1;
+        p[0].downprobe.begin_x=0;
+        p[0].downprobe.begin_y=3;
+        pattern1[p[0].upprobe.begin_y][ p[0].upprobe.begin_x] = '|';
+        pattern1[p[0].downprobe.begin_y][ p[0].downprobe.begin_x] = '|';
     }
 
 }

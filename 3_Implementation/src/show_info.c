@@ -1,6 +1,6 @@
 #include"game.h"
 #include<stdio.h>
-#include<conio.h>
+#include<stdlib.h>
 char l_modes[4][8]={{'\0'},{"Easy"},{"Medium"},{"Hard"}};
 //char up_left = 'q',up_down='w',up_up='e',up_right='r';
 //char down_left = 'h',down_down='j',down_up='k',down_right='l';
@@ -20,8 +20,14 @@ void show_info(void){
     printf("\nUP PROBE CONTROL :- LEFT: '%c' DOWN: '%c' UP: '%c' RIGHT: '%c'\n",up_left,up_down,up_up,up_right);
     printf("\nDOWN PROBE CONTROL :- LEFT: '%c' DOWN: '%c' UP: '%c' RIGHT: '%c'\n",down_left,down_down,down_up,down_right);
 
-    printf("\nTo menu screen press 'm' \n");
-    if(getchar() == 'm')
+    printf("\nPress 'm' for menu\n");
+    char *menu = (char*)malloc(sizeof(char));
+    scanf("%s",menu);
+    if(*menu == 'm'){
+        free(menu);
         show_menu();
+    }
+        
+        
 }
     
