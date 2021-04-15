@@ -1,4 +1,4 @@
-PROJ_NAME = vaccine_proj
+PROJ_NAME = Mr_Bean's_Wire_Loop_Game
 TEST_PROJ_NAME = Test_$(PROJ_NAME)
 
 SRC =src/show_info.c \
@@ -11,7 +11,9 @@ src/clear.c
 
 COV_SRC = test.c
 
-TEST_SRC = test/test.c \
+TEST_SRC = test/test_level_pattern.c \
+test/test_move.c \
+test/test_main.c \
 unity/unity.c 
 INC_H = inc
 INC_T = unity
@@ -34,36 +36,3 @@ all:
 	
 run:
 	$(call FixPath,$(PROJ_NAME).$(EXEC))
-test:
-	gcc -I $(INC_H) -I $(INC_T) $(TEST_SRC) $(SRC) -o $(call FixPath,$(TEST_PROJ_NAME).$(EXEC))
-	./$(call FixPath,$(TEST_PROJ_NAME).$(EXEC))
-
-coverage:
-	cp test/test.c .
-	gcc -fprofile-arcs -ftest-coverage -I $(INC_H) -I $(INC_T) unity/unity.c test.c $(SRC) -o $(call FixPath, $(TEST_PROJ_NAME).$(EXEC))
-	$(call FixPath, ./$(TEST_PROJ_NAME).$(EXEC))
-	gcov -a $(COV_SRC)
-	$(RM) *.$(EXEC)
-	$(RM) *.gcda
-	$(RM) *.gcno
-	$(RM) *.c.gcov
-	$(RM) *.DAT
-	$(RM) test.c
-
-
-cppcheck:
-	cppcheck --enable=all $(SRC) main.c
-debug:
-	gcc -I $(INC_H) $(SRC) main.c -g -o $(PROJ_NAME).$(EXEC)
-	gdb $(PROJ_NAME).$(EXEC)
-
-valgrind:
-	valgrind ./$(TEST_PROJ_NAME).$(EXEC)
-
-
-clean:
-	$(RM) *.DAT
-	$(RM) *.$(EXEC)
-	$(RM) *.gcda
-	$(RM) *.gcno
-	$(RM) *.c.gcov

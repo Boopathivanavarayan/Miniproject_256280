@@ -34,28 +34,28 @@ int main()
 
 void test_move1(void) {
   int exp[3][5]={{1,1,1,3,3},{0,0,0,0,4},{0,0,0,0,1}};
-  int *actual = test_move(1, 'r','l' );
-  int *actual = test_move(1, 'q','l' );
-  int *actual = test_move(1, 'w','l' );
-  TEST_ASSERT_EQUAL_INT_ARRAY(exp[0], actual, 5);
-  TEST_ASSERT_EQUAL_INT_ARRAY(exp[1], actual, 5);
-  TEST_ASSERT_EQUAL_INT_ARRAY(exp[3], actual, 5);
+  int *actual1 = test_move(1, 'r','l' );
+  int *actual2 = test_move(1, 'q','l' );
+  int *actual3 = test_move(1, 'w','l' );
+  TEST_ASSERT_EQUAL_INT_ARRAY(exp[0], actual1, 5);
+  TEST_ASSERT_EQUAL_INT_ARRAY(exp[1], actual2, 5);
+  TEST_ASSERT_EQUAL_INT_ARRAY(exp[3], actual3, 5);
 }
 void test_move2(void) {
   int exp[3][5]={{1,1,0,4,3},{0,0,0,0,4},{0,0,0,0,1}};
-  int *actual = test_move(2, 'r','j' );
-  int *actual = test_move(2, 'q','l' );
-  int *actual = test_move(2, 'r','l' );
-  TEST_ASSERT_EQUAL_INT_ARRAY(exp[0], actual, 5);
-  TEST_ASSERT_EQUAL_INT_ARRAY(exp[1], actual, 5);
-  TEST_ASSERT_EQUAL_INT_ARRAY(exp[3], actual, 5);
+  int *actual1 = test_move(2, 'r','j' );
+  int *actual2 = test_move(2, 'q','l' );
+  int *actual3 = test_move(2, 'r','l' );
+  TEST_ASSERT_EQUAL_INT_ARRAY(exp[0], actual1, 5);
+  TEST_ASSERT_EQUAL_INT_ARRAY(exp[1], actual2, 5);
+  TEST_ASSERT_EQUAL_INT_ARRAY(exp[3], actual3, 5);
 }
 void test_move3(void) {
   int exp[3][5]={{1,1,1,3,3},{0,0,0,0,4},{0,0,0,0,1}};
-  int *actual = test_move(3, 'r','j' );
-  int *actual = test_move(3, 'q','l' );
-  int *actual = test_move(3, 'r','l' );
-  TEST_ASSERT_EQUAL_INT_ARRAY(exp[0], actual, 5);
-  TEST_ASSERT_EQUAL_INT_ARRAY(exp[1], actual, 5);
-  TEST_ASSERT_EQUAL_INT_ARRAY(exp[3], actual, 5);
+  int *actual1 = test_move(3, 'r','j' );
+  int *actual2 = test_move(3, 'q','l' );
+  int *actual3 = test_move(3, 'r','l' );
+  TEST_ASSERT_EQUAL_INT_ARRAY(exp[0], actual1, 5);
+  TEST_ASSERT_EQUAL_INT_ARRAY(exp[1], actual2, 5);
+  TEST_ASSERT_EQUAL_INT_ARRAY(exp[3], actual3, 5);
 }
