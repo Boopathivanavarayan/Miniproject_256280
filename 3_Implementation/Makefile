@@ -6,7 +6,7 @@ BUILD = build
 
 # All source code files
 SRC = project_main.c\
-src/change_setting.c clear.c level_pattern.c score_log.c show_info.c show_menu.c start_game.c 
+src/change_setting.c level_pattern.c score_log.c show_info.c show_menu.c start_game.c clear.c 
 
 # All test source files
 TEST_SRC = test/test_level_pattern.c test_move.c test_main.c\
