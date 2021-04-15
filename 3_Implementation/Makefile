@@ -6,7 +6,7 @@ BUILD = build
 
 # All source code files
 SRC = project_main.c\
-src/change_setting.c level_pattern.c score_log.c show_info.c show_menu.c start_game.c clear.c 
+src/level_pattern.c change_setting.c score_log.c show_info.c show_menu.c start_game.c clear.c 
 
 # All test source files
 TEST_SRC = test/test_level_pattern.c test_move.c test_main.c\
@@ -48,7 +48,7 @@ run:$(PROJECT_NAME)
 
 # Build and run the unit tests
 test:$(BUILD)
-	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT)
+	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT).out
 	./$(TEST_OUTPUT)
 #Coverage
 coverageCheck:$(BUILD)

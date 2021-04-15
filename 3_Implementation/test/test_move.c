@@ -1,9 +1,6 @@
 #include<stdio.h>
-#include<conio.h>
 #include<stdlib.h>
-#include<time.h>
-#include<mem.h>
-#include"game.h"
+#include"test_game.h"
 
 
 //Structure array
@@ -17,8 +14,8 @@ patterns p[3] = {    {.height=7,.width=25,.upprobe.begin_x=0,.upprobe.begin_y=1,
 {.height=20,.width=100,.upprobe.begin_x=0,.upprobe.begin_y=1,.downprobe.begin_x=0,.downprobe.begin_y=3,
 .upprobe.end_x=99,.upprobe.end_y=16,.downprobe.end_x=99,.downprobe.end_y=18,.upprobe.x=0,.upprobe.y=0,.downprobe.x=0,.downprobe.y=0}   };
 
-char up_left = 'q',up_down='w',up_up='e',up_right='r';
-char down_left = 'h',down_down='j',down_up='k',down_right='l';
+//char up_left = 'q',up_down='w',up_up='e',up_right='r';
+//char down_left = 'h',down_down='j',down_up='k',down_right='l';
 
 char up_ctrl;
 char dp_ctrl;

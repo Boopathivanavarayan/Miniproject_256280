@@ -74,6 +74,7 @@ void start_game(int level){
             p[level-1].upprobe.x = p[level-1].upprobe.y = p[level-1].downprobe.x = p[level-1].downprobe.y =0; 
             m = 'q';
             print_pattern[level-1]();
+            // Get up probe down probe controls from user
             printf("Press m twice to go back to menu");
             printf("\nEnter up probe control \n");
             printf("\nUP PROBE CONTROL :- LEFT: '%c' DOWN: '%c' UP: '%c' RIGHT: '%c'\n",up_left,up_down,up_up,up_right);
@@ -88,7 +89,9 @@ void start_game(int level){
 
             if(m == 'm')
                 show_menu();
+        
             p[level-1].upprobe.x = p[level-1].upprobe.y = p[level-1].downprobe.x = p[level-1].downprobe.y =0; 
+            // Check for left, right, down or up control and update variables accordingly.
             if(up_ctrl == up_left)
                 p[level-1].upprobe.x = -1;
             else if(up_ctrl == up_down)
@@ -124,10 +127,10 @@ void start_game(int level){
             nx = p[level-1].downprobe.begin_x + p[level-1].downprobe.x;
             ny = p[level-1].downprobe.begin_y + p[level-1].downprobe.y;
  
-            
+            //Check whether new positions are valid
             if((mx >=0 && mx < p[level-1].width) && (my >= 0 && my < p[level-1].height) &&
                     (nx >=0 && nx < p[level-1].width) && (ny >= 0 && ny < p[level-1].height)){
-                
+                //In case probe position and '#' match end the game.
                 if(level == 1 && (pattern1[ny][nx] =='#'|| pattern1[my][mx] =='#')){
 
                         clear();
@@ -163,6 +166,7 @@ void start_game(int level){
                         if(getchar()=='r')
                             start_game(Level);
                 }
+                // Check whether probes are apart. 
                 if(abs(ny-my) > 3){
                     clear();
                     printf("\n   ALERT: Probes are far apart\n");
@@ -177,6 +181,7 @@ void start_game(int level){
                     if(getchar()=='r')
                         start_game(Level);
                 }
+                //Check whether user reached the end of the game.
                 if(ny >= p[level-1].downprobe.end_y && nx >= p[level-1].downprobe.end_x && 
                         my >= p[level-1].upprobe.end_y && mx >= p[level-1].upprobe.end_x){
                             clear();
@@ -190,7 +195,7 @@ void start_game(int level){
                                 exit(0);
                 }
                 else{
-
+                    // delete current position of the probes.
                     if(level == 1){
                         pattern1[p[level-1].upprobe.begin_y][p[level-1].upprobe.begin_x] = '-';
                         pattern1[p[level-1].downprobe.begin_y][p[level-1].downprobe.begin_x] = '-';
@@ -203,12 +208,13 @@ void start_game(int level){
                         pattern3[p[level-1].upprobe.begin_y][p[level-1].upprobe.begin_x] = '-';
                         pattern3[p[level-1].downprobe.begin_y][p[level-1].downprobe.begin_x] = '-';
                     }   
-                    //update current position
+                    // update current position
                     p[level-1].upprobe.begin_x += p[level-1].upprobe.x;
                     p[level-1].upprobe.begin_y += p[level-1].upprobe.y;
                     p[level-1].downprobe.begin_x += p[level-1].downprobe.x;
                     p[level-1].downprobe.begin_y += p[level-1].downprobe.y;
 
+                    // move the probes
                     if(level == 1){
                         pattern1[p[level-1].upprobe.begin_y][p[level-1].upprobe.begin_x] = '|';
                         pattern1[p[level-1].downprobe.begin_y][p[level-1].downprobe.begin_x] = '|';
