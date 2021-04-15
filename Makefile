@@ -1,13 +1,13 @@
 PROJ_NAME = Mr_Bean's_Wire_Loop_Game
 TEST_PROJ_NAME = Test_$(PROJ_NAME)
 
-SRC =src/show_info.c \
+SRC ="src/show_info.c \
 src/show_menu.c \
 src/score_log.c \
 src/change_setting.c \
 src/level_pattern.c \
 src/start_game.c \
-src/clear.c 
+src/clear.c"
 
 
 TEST_SRC = test/test_level_pattern.c \
