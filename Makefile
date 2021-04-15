@@ -18,5 +18,6 @@ INC_H = inc
 INC_T = unity
 
 all:
-	gcc -I $(INC_H) $(SRC) project_main.c -o $(PROJ_NAME).o
+	echo hello!
+	
 	
