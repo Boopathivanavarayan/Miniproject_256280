@@ -4,6 +4,10 @@ Build | Code Quality | Unity | [Git Inspector](using github.io option)
 ------|----------|-------|--------------
 [![C/C++ CI](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/c-cpp.yml) | [![Static Cppcheck](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/cppcheck.yml) [![Dynamic Valgrind](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/CodeQuality_Dynamic.yml/badge.svg)](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/CodeQuality_Dynamic.yml)| [![Unity - Unit Testing](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/unity.yml/badge.svg)](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/unity.yml)| [![Git Inspector](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/gitinspector.yml/badge.svg)](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/gitinspector.yml)
 
+<img src="https://github.com/Boopathivanavarayan/Miniproject_256280/blob/main/5_ImagesAndVideos/name2.PNG" width="850" height="150">
+
+## Brief Introduction
+Remember Mr.Bean **WIRE LOOP** game at the country fete. This is one among the traditional games. Here its virtual CLI verison has been implemented using C programing language.
 
 ## Folder Structure
 Folder             | Description
@@ -14,23 +18,14 @@ Folder             | Description
 `4_Test_plan`      | Documents with test plans and procedures
 `5_ImagesAndVideos`| All images used 
 
-## Contributors List and Summary
+## Contributors List 
 
-PS No. |  Name   |    Features    | Issuess Raised |Issues Resolved|No Test Cases|Test Case Pass
--------|---------|----------------|----------------|---------------|-------------|--------------
-`ABC` | 12345678  | Feature A, B etc    | X No     | X No   |X No   |X No     
-`DEF` | 12345678  | Feature C, D etc    | X No     | X No   |X No   |X No     
+PS No. |  Name   |   
+-------|---------|
+`SME` | Barath and Prithvi  |   
+`256280` | Boopathi Vanavarayan  |  
 
-## Challenges Faced and How Was It Overcome
 
-1. ABC
-2. BCD
-3. ...
-4. ...
 
-## Learning Resources
-1. [markdownCheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-2. [markdownBasics](https://guides.github.com/features/mastering-markdown/)
-3. [git inspector](https://github.com/ejwa/gitinspector.git)
-4. [github workflow](https://docs.github.com/en/actions/learn-github-action)
+
 

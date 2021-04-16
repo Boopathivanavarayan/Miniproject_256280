@@ -30,11 +30,7 @@ int mx,my,nx,ny;
 
 int result[5];
 int* test_move(int level, char up_ctrl, char dp_ctrl){
-    result[0] =0;
-    result[1] =0;
-    result[2] =0;
-    result[3] =0;
-    result[4] =0;
+    
     p[level-1].upprobe.x = p[level-1].upprobe.y = p[level-1].downprobe.x = p[level-1].downprobe.y =0; 
     if(up_ctrl == up_left)
         p[level-1].upprobe.x = -1;
@@ -119,13 +115,7 @@ int* test_move(int level, char up_ctrl, char dp_ctrl){
                 printf("\nresult2:%d",result[2]);
                 result[3] =  p[level-1].downprobe.begin_y;
                 printf("\nresult3:%d",result[3]);
-               /*
-                result[0] =  mx;
-                result[1] =  my;
-                result[2] =  nx;
-                result[3] =  ny;
-                result[4] = 3;
-                */
+               
                 if(level == 1){
                         pattern1[p[level-1].upprobe.begin_y][p[level-1].upprobe.begin_x] = '|';
                         pattern1[p[level-1].downprobe.begin_y][p[level-1].downprobe.begin_x] = '|';
