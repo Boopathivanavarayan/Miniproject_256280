@@ -7,7 +7,7 @@ Build | Code Quality | Unity | [Git Inspector](using github.io option)
 <img src="https://github.com/Boopathivanavarayan/Miniproject_256280/blob/main/5_ImagesAndVideos/name1.PNG" width="750" height="100">
 
 ## Brief Introduction
-Remember Mr.Bean playing **WIRE LOOP** game at the country fete. This is one among the famous traditional games. Here its OS independent virtual CLI verison has been developed using C programing language.
+Remember Mr.Bean playing **WIRE LOOP** game at the country fete. This is one among the famous traditional games. Here its OS independent  CLI verison has been developed with C programing language.
 
 ## Folder Structure
 Folder             | Description
