@@ -10,8 +10,8 @@
 
 ## Table no: Low level test plan
 
-| **Test ID** | **Description**                                              | **HLTP_ID** | |**Type Of Test**  |    
-|-------------|--------------------------------------------------------------|------------||------------------|
+| **Test ID** | **Description**                                              | **HLTP_ID** | **Type Of Test**  |    
+|-------------|--------------------------------------------------------------|------------|------------------|
 |  L_01       |Smooth entry, exit from any of the 3 menus available| H_01 | Requirement based |
 |  L_02       |Level setting should be corectly replicated| H_02 | Requirement based |
 |  L_03       |Control Chnage setting must be correctly replicated| H_02 | Requirement based |

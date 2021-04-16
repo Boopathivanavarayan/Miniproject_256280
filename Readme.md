@@ -4,10 +4,10 @@ Build | Code Quality | Unity | [Git Inspector](using github.io option)
 ------|----------|-------|--------------
 [![C/C++ CI](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/c-cpp.yml) | [![Static Cppcheck](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/cppcheck.yml) [![Dynamic Valgrind](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/CodeQuality_Dynamic.yml/badge.svg)](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/CodeQuality_Dynamic.yml)| [![Unity - Unit Testing](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/unity.yml/badge.svg)](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/unity.yml)| [![Git Inspector](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/gitinspector.yml/badge.svg)](https://github.com/Boopathivanavarayan/Miniproject_256280/actions/workflows/gitinspector.yml)
 
-<img src="https://github.com/Boopathivanavarayan/Miniproject_256280/blob/main/5_ImagesAndVideos/name2.PNG" width="850" height="150">
+<img src="https://github.com/Boopathivanavarayan/Miniproject_256280/blob/main/5_ImagesAndVideos/name1.PNG" width="750" height="100">
 
 ## Brief Introduction
-Remember Mr.Bean **WIRE LOOP** game at the country fete. This is one among the traditional games. Here its virtual CLI verison has been implemented using C programing language.
+Remember Mr.Bean playing **WIRE LOOP** game at the country fete. This is one among the famous traditional games. Here its OS independent virtual CLI verison has been developed using C programing language.
 
 ## Folder Structure
 Folder             | Description
@@ -22,7 +22,7 @@ Folder             | Description
 
 PS No. |  Name   |   
 -------|---------|
-`SME` | Barath and Prithvi  |   
+`SME` | Bharath and Prithvisekhar  |   
 `256280` | Boopathi Vanavarayan  |  
 
 
