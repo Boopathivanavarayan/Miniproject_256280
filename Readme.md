@@ -16,7 +16,7 @@ Folder             | Description
 `2_Design`         | Documents specifying design details
 `3_Implementation` | All code and documentation
 `4_Test_plan`      | Documents with test plans and procedures
-`5_ImagesAndVideos`| All images used 
+`5_ImagesAndVideos`| All images file and game play video.
 
 ## Contributors List 
 

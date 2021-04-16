@@ -33,10 +33,10 @@ endif
 .PHONY: run clean test doc all
 
 all:
-	gcc -I $(INC_H) $(SRC) project_main.c -o $(call FixPath,$(PROJ_NAME).$(EXEC))
+	gcc -I $(INC_H) $(SRC) project_main.c -o build/$(call FixPath,$(PROJ_NAME).$(EXEC))
 	
 run:
-	$(call FixPath,$(PROJ_NAME).$(EXEC))
+	build/$(call FixPath,$(PROJ_NAME).$(EXEC))
 test:
 	gcc -I $(INC_H) -I $(INC_T) $(TEST_SRC) -o $(call FixPath,$(TEST_PROJ_NAME).$(EXEC))
 	./$(call FixPath,$(TEST_PROJ_NAME).$(EXEC))
@@ -54,8 +54,8 @@ coverage:
 cppcheck:
 	cppcheck --enable=all $(SRC) project_main.c
 debug:
-	gcc -I $(INC_H) $(SRC) project_main.c -g -o $(PROJ_NAME).$(EXEC)
-	gdb $(PROJ_NAME).$(EXEC)
+	gcc -I $(INC_H) $(SRC) project_main.c -g -o build/$(PROJ_NAME).$(EXEC)
+	gdb build/$(PROJ_NAME).$(EXEC)
 
 valgrind:
 	valgrind ./$(TEST_PROJ_NAME).$(EXEC)

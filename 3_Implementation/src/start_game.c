@@ -181,7 +181,7 @@ void start_game(int level){
                         }
                 }
                 // Check whether probes are apart. 
-                if(abs(ny-my) > 3){
+                if(abs(ny-my) > 4){
                     clear();
                     printf("\n   ALERT: Probes are far apart\n");
                     printf("\nPress'r' to restart and Enter\n");
@@ -192,7 +192,7 @@ void start_game(int level){
                         start_game(Level);
                     }
                 }
-                if(abs(nx-mx) > 3){
+                if(abs(nx-mx) > 4){
                     clear();
                     printf("\n   ALERT: Probes are far apart\n");
                     printf("\nPress'r' to restart and Enter\n");
@@ -278,12 +278,12 @@ void set_probe_begning(int level){
         else
             pattern1[p[level-1].downprobe.begin_y][p[level-1].downprobe.begin_x]= '-';
 
-        p[0].upprobe.begin_x=0;
-        p[0].upprobe.begin_y=1;
-        p[0].downprobe.begin_x=0;
-        p[0].downprobe.begin_y=3;
-        pattern1[p[0].upprobe.begin_y][ p[0].upprobe.begin_x] = '|';
-        pattern1[p[0].downprobe.begin_y][ p[0].downprobe.begin_x] = '|';
+        p[level-1].upprobe.begin_x=0;
+        p[level-1].upprobe.begin_y=1;
+        p[level-1].downprobe.begin_x=0;
+        p[level-1].downprobe.begin_y=3;
+        pattern1[p[level-1].upprobe.begin_y][ p[level-1].upprobe.begin_x] = '|';
+        pattern1[p[level-1].downprobe.begin_y][ p[level-1].downprobe.begin_x] = '|';
     }
     else if(level == 2){
         if(pattern2[p[level-1].upprobe.begin_y][p[level-1].upprobe.begin_x] == '#')
@@ -296,12 +296,12 @@ void set_probe_begning(int level){
         else
             pattern2[p[level-1].downprobe.begin_y][p[level-1].downprobe.begin_x]= '-';
 
-        p[0].upprobe.begin_x=0;
-        p[0].upprobe.begin_y=1;
-        p[0].downprobe.begin_x=0;
-        p[0].downprobe.begin_y=3;
-        pattern1[p[0].upprobe.begin_y][ p[0].upprobe.begin_x] = '|';
-        pattern1[p[0].downprobe.begin_y][ p[0].downprobe.begin_x] = '|';
+        p[level-1].upprobe.begin_x=0;
+        p[level-1].upprobe.begin_y=1;
+        p[level-1].downprobe.begin_x=0;
+        p[level-1].downprobe.begin_y=3;
+        pattern2[p[level-1].upprobe.begin_y][ p[level-1].upprobe.begin_x] = '|';
+        pattern2[p[level-1].downprobe.begin_y][ p[level-1].downprobe.begin_x] = '|';
     }
         else if(level == 3){
             if( pattern3[p[level-1].upprobe.begin_y][p[level-1].upprobe.begin_x] == '#')
@@ -314,12 +314,12 @@ void set_probe_begning(int level){
             else
                 pattern3[p[level-1].downprobe.begin_y][p[level-1].downprobe.begin_x] = '-';
 
-        p[0].upprobe.begin_x=0;
-        p[0].upprobe.begin_y=1;
-        p[0].downprobe.begin_x=0;
-        p[0].downprobe.begin_y=3;
-        pattern1[p[0].upprobe.begin_y][ p[0].upprobe.begin_x] = '|';
-        pattern1[p[0].downprobe.begin_y][ p[0].downprobe.begin_x] = '|';
+        p[level-1].upprobe.begin_x=0;
+        p[level-1].upprobe.begin_y=1;
+        p[level-1].downprobe.begin_x=0;
+        p[level-1].downprobe.begin_y=3;
+        pattern3[p[level-1].upprobe.begin_y][ p[level-1].upprobe.begin_x] = '|';
+        pattern3[p[level-1].downprobe.begin_y][ p[level-1].downprobe.begin_x] = '|';
     }
 
 }

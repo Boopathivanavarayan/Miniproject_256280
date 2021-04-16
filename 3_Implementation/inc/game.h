@@ -29,8 +29,11 @@ typedef struct{
 	int height,width;
 	struct probe_pos upprobe,downprobe;
 }patterns;
-
-void change_setting(void);///< A function that guide you through the level and control setting change of the game.
+/**
+ * @brief A function that guide you through the level and control setting change of the game.
+ * 
+ */
+void change_setting(void);
 /**
  * @brief A function to append the score ie.,time taken to finish the game in log.txt file.
  * 
@@ -38,16 +41,30 @@ void change_setting(void);///< A function that guide you through the level and c
  * @param[in] time_taken 
  */
 void score_log(int status,double time_taken);
-void show_info(void);//< A function to display the rules and how to play the game. 
-void show_menu(void);//< A function to dispaly menu.
+/**
+ * @brief A function to display the rules and how to play the game. 
+ * 
+ */
+void show_info(void);
+/**
+ * @brief A function to dispaly menu.
+ * 
+ */
+void show_menu(void);
 /**
  * @brief A function to display the gaming interface.
  * 
  * @param[in] level 
  */
 void start_game(int level);
-/// Array of function pointers to display diffrent playfield patterns.
+/**
+ * @brief Array of function pointers to display diffrent playfield patterns.
+ * 
+ */
 void (*print_pattern[3])(void);
-/// A function to clear console in linux, windows, unix and apple OS.
+/**
+ * @brief A function to clear console in linux, windows, unix and apple OS.
+ * 
+ */
 void clear();
 #endif /* #define __GAME_H__ */
